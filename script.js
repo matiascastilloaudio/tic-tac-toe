@@ -22,12 +22,20 @@ function createPlayer(name, mark) {
 
 // Game Module
 const gameFlow = (() => {
-    const player1 = createPlayer('X', 'X');
-    const player2 = createPlayer('O', 'O');
     const display = document.querySelector('#display');
-    display.textContent = `${player1.name} starts!`;
+    display.textContent = 'Input Your Names';
+    const actionBtn = document.querySelector('.actionBtn');
+    let player1;
+    let player2;
     let currentPlayer = player1;
     let gameOver = false;
+
+    actionBtn.addEventListener('click', () => {
+        player1 = createPlayer(document.getElementById('name1').value, 'X');
+        player2 = createPlayer(document.getElementById('name2').value, 'O');
+        display.textContent = `${currentPlayer.name} starts!`;
+    });
+
     const winPatterns = [
         [0, 1, 2],
         [3, 4, 5],

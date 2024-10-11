@@ -36,7 +36,8 @@ body {
 }
 
 .actionBtn {
-    padding: 5px 50px;
+    padding: 10px;
+    width: 100px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -45,4 +46,10 @@ body {
 
 .actionBtn:hover {
     background-color: #94a3b8;
+}
+
+input {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
 }
